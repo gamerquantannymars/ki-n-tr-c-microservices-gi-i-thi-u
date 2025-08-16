@@ -1,0 +1,27 @@
+version: '3'
+services:
+  books-service:
+    build:
+      context: ./services/books
+    ports:
+      - '8081:8080'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/books
+  users-service:
+    build:
+      context: ./services/users
+    ports:
+      - '8082:8080'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/users
+  borrowing-service:
+    build:
+      context: ./services/borrowing
+    ports:
+      - '8083:8080'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/borrowing
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
