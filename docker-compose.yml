@@ -1,6 +1,6 @@
 version: '3'
 services:
-  # Service for managing books
+  # Dịch vụ quản lý sách
   books-service:
     build:
       context: ./services/books
@@ -8,7 +8,7 @@ services:
       - '8081:8080'
     environment:
       - MONGO_URI=mongodb://mongo:27017/books  # MongoDB URI for books service
-  # Service for managing users
+  # Dịch vụ quản lý người dùng
   users-service:
     build:
       context: ./services/users
@@ -16,7 +16,7 @@ services:
       - '8082:8080'
     environment:
       - MONGO_URI=mongodb://mongo:27017/users  # MongoDB URI for users service
-  # Service for managing borrowing activities
+  # Dịch vụ quản lý hoạt động mượn sách
   borrowing-service:
     build:
       context: ./services/borrowing
@@ -24,10 +24,10 @@ services:
       - '8083:8080'
     environment:
       - MONGO_URI=mongodb://mongo:27017/borrowing  # MongoDB URI for borrowing service
-  # MongoDB database service (version specified)
+  # Dịch vụ cơ sở dữ liệu MongoDB (phiên bản được chỉ định)
   mongo:
     image: mongo:5.0  # Specify image version for stability
     ports:
       - '27017:27017'  # Exposing MongoDB port
 
-# This docker-compose file defines various microservices and a MongoDB database.
+# Tệp docker-compose này xác định nhiều microservices và một cơ sở dữ liệu MongoDB.
