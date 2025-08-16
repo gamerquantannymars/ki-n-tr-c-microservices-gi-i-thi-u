@@ -29,3 +29,5 @@ services:
     image: mongo:5.0  # Specify image version for stability
     ports:
       - '27017:27017'  # Exposing MongoDB port
+
+# This docker-compose file defines various microservices and a MongoDB database.
