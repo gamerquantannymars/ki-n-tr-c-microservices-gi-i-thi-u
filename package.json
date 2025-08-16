@@ -11,6 +11,6 @@
     "mongoose": "^5.10.9",
     "body-parser": "^1.19.0"
   },
-  "author": "Nguyễn Văn A", // Thay thế bằng tên của bạn
+  "author": "Nguyễn Văn A", // Thay thế bằng tên đầy đủ của bạn để đảm bảo ghi rõ tác giả
   "license": "ISC"
 }
