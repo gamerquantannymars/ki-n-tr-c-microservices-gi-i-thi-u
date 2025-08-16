@@ -7,7 +7,7 @@ services:
     ports:
       - '8081:8080'
     environment:
-      - MONGO_URI=mongodb://mongo:27017/books
+      - MONGO_URI=mongodb://mongo:27017/books  # MongoDB URI for books service
   # Service for managing users
   users-service:
     build:
@@ -15,7 +15,7 @@ services:
     ports:
       - '8082:8080'
     environment:
-      - MONGO_URI=mongodb://mongo:27017/users
+      - MONGO_URI=mongodb://mongo:27017/users  # MongoDB URI for users service
   # Service for managing borrowing activities
   borrowing-service:
     build:
@@ -23,9 +23,9 @@ services:
     ports:
       - '8083:8080'
     environment:
-      - MONGO_URI=mongodb://mongo:27017/borrowing
+      - MONGO_URI=mongodb://mongo:27017/borrowing  # MongoDB URI for borrowing service
   # MongoDB database service
   mongo:
     image: mongo
     ports:
-      - '27017:27017'
+      - '27017:27017'  # Exposing MongoDB port
