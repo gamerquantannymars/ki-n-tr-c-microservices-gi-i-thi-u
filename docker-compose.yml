@@ -24,8 +24,8 @@ services:
       - '8083:8080'
     environment:
       - MONGO_URI=mongodb://mongo:27017/borrowing  # MongoDB URI for borrowing service
-  # MongoDB database service
+  # MongoDB database service (version specified)
   mongo:
-    image: mongo
+    image: mongo:5.0  # Specify image version for stability
     ports:
       - '27017:27017'  # Exposing MongoDB port
